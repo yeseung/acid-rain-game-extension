@@ -1,0 +1,201 @@
+body {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background: #E0F7FA;
+    margin: 0;
+    padding: 0;
+    width: 800px;
+    height: 543px;
+    font-size: 16px;
+}
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+#gameStats {
+    background: #264655;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 0 13px 0;
+    font-size: 16px;
+    flex-wrap: wrap;
+}
+.stat-box {
+    background: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+#levelDisplay {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+#gameContainer {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    background: linear-gradient(to bottom, #87CEEB, #E0F7FA);
+    overflow: hidden;
+    margin: 0 auto 0px;
+    border-radius: 0px;
+}
+#player {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+.raindrop {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background: linear-gradient(to bottom, #4CAF50, #2E7D32);
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+    z-index: 5;
+}
+#wordInput {
+    width: 300px;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #264654;
+    border-radius: 25px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    margin-bottom: 10px;
+}
+#wordInput:focus {
+    border-color: #162830;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+#startBtn {
+    margin-top: 5px;
+    padding: 10px 25px;
+    font-size: 16px;
+    background-color: #264654;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#startBtn:hover {
+    background-color: #162830;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-50px); opacity: 0; }
+}
+.bonus {
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    animation: floatUp 1s forwards;
+}
+.correct-effect {
+    color: #008080;
+}
+.wrong-effect {
+    color: #e74c3c;
+}
+.heart {
+    color: #e74c3c;
+    margin: 0 2px;
+}
+#accuracyMeter {
+    width: 800px;
+    height: 3px;
+    background: #ecf0f1;
+    border-radius: 0px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+#accuracyBar {
+    height: 100%;
+    width: 100%;
+    background: #008080;
+    transition: width 0.5s;
+}
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(0.8); }
+}
+.level-up {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: #e74c3c;
+    z-index: 100;
+    pointer-events: none;
+}
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 100;
+    width: 80%;
+    max-width: 400px;
+}
+.game-over h2 {
+    margin-top: 0;
+    color: #e74c3c;
+}
+.game-over p {
+    margin: 10px 0;
+}
+.game-over button {
+    margin-top: 15px;
+    padding: 8px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.game-over button:hover {
+    background-color: #2980b9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer {
+    background: #008080;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

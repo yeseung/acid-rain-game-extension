@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산성비 게임</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="gameStats">
+    <div class="stat-box"><span id="levelDisplay">현재 단계: 1</span></div>
+    <div class="stat-box">점수: <span id="score">0</span></div>
+    <div class="stat-box">생명: <span id="lives" class="heart">❤❤❤</span></div>
+    <div class="stat-box">정타: <span id="hits">0</span></div>
+    <div class="stat-box">오타: <span id="misses">0</span></div>
+    <div class="stat-box">정확도: <span id="accuracy">100%</span></div>
+</div>
+<div id="accuracyMeter"><div id="accuracyBar"></div></div>
+<div id="gameContainer">
+    <div id="player"></div>
+</div>
+<input type="text" id="wordInput" placeholder="단어 입력 후 엔터" autocomplete="off">
+<button id="startBtn">게임 시작</button>
+
+<div class="footer">
+    광고 :&nbsp;&nbsp;<a href="https://xn--ru4b32dw9ah8ozjciwk.kr" target="_blank" rel="noreferrer">https://한컴타자연습.kr</a>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
